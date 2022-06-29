@@ -3,7 +3,9 @@ Trait file is the one containing all functionality to take $validator->failed();
 where the controller with validator goes like this
 ```
         $validator = Validator::make($request->all(), [
-            "action"  => "required",
+            "abc"  => "required",
+            "xyz" => "required | file",
+            "abcxyz" => "required | max:5",
         ]);
         if($validator->fails()){
             $failed = $validator->failed();
